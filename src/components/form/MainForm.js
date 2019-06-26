@@ -23,6 +23,10 @@ class MainForm extends Component {
     const { step } = this.state;
     this.setState({ step: step - 1 });
   };
+  //   Go to first Step
+  stepOne = () => {
+    this.setState({ step: 1 });
+  };
   // Handle the field Change
   inputChangeHandler = e => {
     console.log('as');
@@ -35,20 +39,32 @@ class MainForm extends Component {
     switch (step) {
       case 1:
         return (
-          <FormShapeType
-            nextStep={this.nextStep}
-            onChangeHandler={this.inputChangeHandler}
-          />
+          <div className="p-2">
+            <h5>Step 1 - Select Your Shape</h5>
+            <FormShapeType
+              nextStep={this.nextStep}
+              prevStep={this.prevStep}
+              onChangeHandler={this.inputChangeHandler}
+            />
+          </div>
         );
       case 2:
         if (shape === 'circle') {
-          return <Circle nextStep={this.nextStep} />;
+          return <Circle nextStep={this.nextStep} prevStep={this.prevStep} />;
         } else if (shape === 'rectangle') {
-          return <Rectangle nextStep={this.nextStep} />;
+          return (
+            <Rectangle nextStep={this.nextStep} prevStep={this.prevStep} />
+          );
         }
         break;
       case 3:
-        return <Result resultValue={result} />;
+        return (
+          <Result
+            resultValue={result}
+            shapeName={shape}
+            startOver={this.stepOne}
+          />
+        );
     }
   }
 }

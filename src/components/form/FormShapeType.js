@@ -7,7 +7,7 @@ export default class FormShapeType extends Component {
   };
   back = e => {
     e.preventDefault();
-    this.props.nextStep();
+    this.props.prevStep();
   };
   render() {
     const { values, onChangeHandler } = this.props;
@@ -22,6 +22,7 @@ export default class FormShapeType extends Component {
                   type="radio"
                   className="form-check-input"
                   name="shape"
+                  checked
                   value="rectangle"
                   onChange={onChangeHandler}
                 />
@@ -41,7 +42,7 @@ export default class FormShapeType extends Component {
               </label>
             </div>
           </div>
-          <input type="submit" value="Next" />
+          <input type="submit" className="btn btn-primary" value="Next" />
         </form>
       </div>
     );

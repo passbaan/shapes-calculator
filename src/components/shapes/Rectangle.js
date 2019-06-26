@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 export default class Rectangle extends Component {
   state = {
     width: 1,
-    length: 1
+    height: 1
   };
   continue = e => {
     e.preventDefault();
 
-    this.props.nextStep(this.state.width * this.state.length);
+    this.props.nextStep(this.state.width * this.state.height);
   };
   back = e => {
     e.preventDefault();
-    this.props.nextStep();
+    this.props.prevStep();
   };
   inputChangeHandler = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -20,31 +20,35 @@ export default class Rectangle extends Component {
   render() {
     return (
       <div>
-        <h1>Rectangle</h1>
+        <h5>Step 2 - Insert your values</h5>
+        <p className="lead">
+          You have selected a rectangle, please input the required variables
+        </p>
         <form className="container" onSubmit={this.continue}>
-          <div class="form-group ">
-            <label for="length">Length</label>
+          <div className="form-group ">
+            <label htmlFor="height">Height</label>
             <input
               type="number"
-              class="form-control"
-              name="length"
-              placeholder="Enter Length"
-              value={this.state.length}
+              className="form-control"
+              name="height"
+              placeholder="Enter Height"
+              value={this.state.height}
               onChange={this.inputChangeHandler}
             />
           </div>
-          <div class="form-group ">
-            <label for="length">Width</label>
+          <div className="form-group ">
+            <label htmlFor="width">Width</label>
             <input
               type="number"
-              class="form-control"
+              className="form-control"
               name="width"
               placeholder="Enter Width"
               value={this.state.width}
               onChange={this.inputChangeHandler}
             />
           </div>
-          <input type="submit" value="Next" />
+          <input type="submit" className="btn btn-primary mr-3" value="Next" />
+          <input type="button" className="btn btn-light" value="Cancel" onClick={this.back} />
         </form>
       </div>
     );

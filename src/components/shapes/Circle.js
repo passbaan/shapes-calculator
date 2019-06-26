@@ -6,11 +6,12 @@ export default class Circle extends Component {
   };
   continue = e => {
     e.preventDefault();
-    this.props.nextStep(this.state.diameter*3.14);
+    let area = this.state.diameter * 3.14;
+    this.props.nextStep(area);
   };
   back = e => {
     e.preventDefault();
-    this.props.nextStep();
+    this.props.prevStep();
   };
   inputChangeHandler = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -18,20 +19,24 @@ export default class Circle extends Component {
   render() {
     return (
       <div>
-        <h1>Circle</h1>
+        <h5>Step 2 - Insert your values</h5>
+        <p className="lead">
+          You have selected a circle, please input the required variables
+        </p>
         <form className="container" onSubmit={this.continue}>
-          <div class="form-group ">
-            <label for="length">Diameter</label>
+          <div className="form-group ">
+            <label htmlFor="length">Diameter</label>
             <input
               type="number"
-              class="form-control"
-              name="circleDiameter"
+              className="form-control"
+              name="diameter"
               placeholder="Enter Diameter"
               value={this.state.diameter}
               onChange={this.inputChangeHandler}
             />
           </div>
-          <input type="submit" value="Next" />
+          <input type="submit" className="btn btn-primary" value="Next" />
+          <input type="button" value="Cancel" className="btn btn-light" onClick={this.back} />
         </form>
       </div>
     );

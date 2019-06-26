@@ -3,8 +3,8 @@ import logo from '../../BWLogo.png';
 
 function Header() {
   return (
-    <div className="contianer-fluid text-center">
-      <img className=" logo-calculator" src={logo} alt="" />
+    <div className="contianer-fluid text-center" style={{background:"#7ACEB4"}}>
+      <img className="logo-calculator p-4" src={logo} alt="" />
     </div>
   );
 }
