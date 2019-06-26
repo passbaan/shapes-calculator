@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/shapes-calculator/static/css/main.397bac47.chunk.css",
+    "main.js": "/shapes-calculator/static/js/main.51edc3da.chunk.js",
+    "main.js.map": "/shapes-calculator/static/js/main.51edc3da.chunk.js.map",
+    "runtime~main.js": "/shapes-calculator/static/js/runtime~main.3fad441c.js",
+    "runtime~main.js.map": "/shapes-calculator/static/js/runtime~main.3fad441c.js.map",
+    "static/css/2.0624914a.chunk.css": "/shapes-calculator/static/css/2.0624914a.chunk.css",
+    "static/js/2.e0e88dde.chunk.js": "/shapes-calculator/static/js/2.e0e88dde.chunk.js",
+    "static/js/2.e0e88dde.chunk.js.map": "/shapes-calculator/static/js/2.e0e88dde.chunk.js.map",
+    "index.html": "/shapes-calculator/index.html",
+    "precache-manifest.fbc51395d6f6786bd383ba7918364ec4.js": "/shapes-calculator/precache-manifest.fbc51395d6f6786bd383ba7918364ec4.js",
+    "service-worker.js": "/shapes-calculator/service-worker.js",
+    "static/css/2.0624914a.chunk.css.map": "/shapes-calculator/static/css/2.0624914a.chunk.css.map",
+    "static/css/main.397bac47.chunk.css.map": "/shapes-calculator/static/css/main.397bac47.chunk.css.map",
+    "static/media/BWLogo.png": "/shapes-calculator/static/media/BWLogo.6d4e98c1.png"
+  }
+}
