@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eb1d59b631f17d3053e78fa3ad2cb024",
+    "revision": "d3a95411434b8af08b6bcef36e3bcb6d",
     "url": "/shapes-calculator/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shapes-calculator/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "65667ab5d459d58c7b44",
+    "revision": "68df637a16ffee63457a",
     "url": "/shapes-calculator/static/css/main.397bac47.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shapes-calculator/static/js/2.e0e88dde.chunk.js"
   },
   {
-    "revision": "65667ab5d459d58c7b44",
-    "url": "/shapes-calculator/static/js/main.51edc3da.chunk.js"
+    "revision": "68df637a16ffee63457a",
+    "url": "/shapes-calculator/static/js/main.0880e430.chunk.js"
   },
   {
     "revision": "0f7f6b7570c1ff91b2a0",
