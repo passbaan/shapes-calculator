@@ -3,8 +3,8 @@ import React from 'react';
 export default function Footer() {
   return (
     <div
-      className="container-fluid text-center"
-      style={{ background: '#0B142B', position: 'absolute', bottom: '0' }}>
+      className="container-fluid text-center footer "
+      style={{ background: '#0B142B' }}>
       <p className="lead text-light p-3">bombayworks.com</p>
     </div>
   );

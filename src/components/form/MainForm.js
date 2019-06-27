@@ -3,6 +3,8 @@ import FormShapeType from './FormShapeType';
 
 import Circle from '../shapes/Circle';
 import Rectangle from '../shapes/Rectangle';
+import Square from '../shapes/Square';
+import Ellipse from '../shapes/Ellipse';
 
 import Result from './Result';
 
@@ -29,7 +31,6 @@ class MainForm extends Component {
   };
   // Handle the field Change
   inputChangeHandler = e => {
-    console.log('as');
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -55,6 +56,10 @@ class MainForm extends Component {
           return (
             <Rectangle nextStep={this.nextStep} prevStep={this.prevStep} />
           );
+        } else if (shape === 'square') {
+          return <Square nextStep={this.nextStep} prevStep={this.prevStep} />;
+        } else if (shape === 'ellipse') {
+          return <Ellipse nextStep={this.nextStep} prevStep={this.prevStep} />;
         }
         break;
       case 3:
@@ -64,6 +69,17 @@ class MainForm extends Component {
             shapeName={shape}
             startOver={this.stepOne}
           />
+        );
+      default:
+        return (
+          <div className="p-2">
+            <h5>Step 1 - Select Your Shape</h5>
+            <FormShapeType
+              nextStep={this.nextStep}
+              prevStep={this.prevStep}
+              onChangeHandler={this.inputChangeHandler}
+            />
+          </div>
         );
     }
   }

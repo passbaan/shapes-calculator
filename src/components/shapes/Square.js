@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
-export default class Circle extends Component {
+export default class Square extends Component {
   state = {
-    diameter: 1
+    width: 1
   };
   continue = e => {
     e.preventDefault();
-    let area = this.state.diameter * 3.14;
-    this.props.nextStep(area.toFixed(2));
+    this.props.nextStep(this.state.width * this.state.width);
   };
   back = e => {
     e.preventDefault();
@@ -21,22 +20,27 @@ export default class Circle extends Component {
       <div>
         <h5>Step 2 - Insert your values</h5>
         <p className="lead">
-          You have selected a circle, please input the required variables
+          You have selected a Square, please input the required variables
         </p>
         <form className="container" onSubmit={this.continue}>
           <div className="form-group ">
-            <label htmlFor="length">Diameter</label>
+            <label htmlFor="width">Width</label>
             <input
               type="number"
               className="form-control"
-              name="diameter"
-              placeholder="Enter Diameter"
-              value={this.state.diameter}
+              name="width"
+              placeholder="Enter Width"
+              value={this.state.width}
               onChange={this.inputChangeHandler}
             />
           </div>
           <input type="submit" className="btn btn-primary mr-3" value="Next" />
-          <input type="button" value="Cancel" className="btn btn-light" onClick={this.back} />
+          <input
+            type="button"
+            className="btn btn-light"
+            value="Cancel"
+            onClick={this.back}
+          />
         </form>
       </div>
     );

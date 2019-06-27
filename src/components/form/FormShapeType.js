@@ -10,19 +10,19 @@ export default class FormShapeType extends Component {
     this.props.prevStep();
   };
   render() {
-    const { values, onChangeHandler } = this.props;
+    const {  onChangeHandler } = this.props;
 
     return (
       <div>
         <form onSubmit={this.continue} className="form">
-          <div className="form-group">
+          <div className="form-group"  role="group">
             <div className="form-check">
               <label className="form-check-label">
                 <input
                   type="radio"
                   className="form-check-input"
                   name="shape"
-                  checked
+                  
                   value="rectangle"
                   onChange={onChangeHandler}
                 />
@@ -36,9 +36,36 @@ export default class FormShapeType extends Component {
                   className="form-check-input"
                   name="shape"
                   value="circle"
+                  
                   onChange={onChangeHandler}
                 />
                 Circle
+              </label>
+            </div>
+            <div className="form-check">
+              <label className="form-check-label">
+                <input
+                  type="radio"
+                  className="form-check-input"
+                  name="shape"
+                  value="square"
+                  
+                  onChange={onChangeHandler}
+                />
+                Square
+              </label>
+            </div>
+            <div className="form-check">
+              <label className="form-check-label">
+                <input
+                  type="radio"
+                  className="form-check-input"
+                  name="shape"
+                  value="ellipse"
+                  
+                  onChange={onChangeHandler}
+                />
+                Ellipse
               </label>
             </div>
           </div>
