@@ -22,7 +22,7 @@ export default class FormShapeType extends Component {
                   type="radio"
                   className="form-check-input"
                   name="shape"
-                  
+                  defaultChecked
                   value="rectangle"
                   onChange={onChangeHandler}
                 />
